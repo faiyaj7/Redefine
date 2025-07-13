@@ -12,6 +12,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@tailwindcss/vite": "^4.1.11",
+    "clsx": "^2.1.1",
     "gsap": "^3.13.0",
     "install": "^0.13.0",
     "npm": "^10.9.3",
