@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
+import { TiLocationArrow } from "react-icons/ti";
+import Button from "./Button";
 
 const Hero = () => {
   const totalVideos = 4;
@@ -145,6 +147,12 @@ const Hero = () => {
             <p className="mb-5 max-w-64 font-robert-regular text-blue-100 ">
               Enter the Metagame Layer <br /> Unleash the Play Economy
             </p>
+            <Button
+              id="watch-trailer"
+              title="Watch trailer"
+              leftIcon={<TiLocationArrow />}
+              containerClass="bg-yellow-300 flex-center gap-1"
+            />
           </div>
         </div>
       </div>
