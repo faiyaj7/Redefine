@@ -9,10 +9,11 @@ const About = () => {
       scrollTrigger: {
         trigger: "#clip",
         start: "center center",
-        end: "+=800 center",
+        end: "center top",
         scrub: 0.5,
         pin: true,
         pinSpacing: true,
+        // markers: true,
       },
     });
     clipAnimation.to(".mask-clip-path", {
