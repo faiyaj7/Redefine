@@ -1,6 +1,6 @@
 on:
   push:
-    branches: main
+    branches: [main]
 
 env:
   VITE_APIKEY: ${{ secrets.VITE_APIKEY }}
@@ -29,11 +29,12 @@ jobs:
           npm install
           npm run build
 
-      - name: 📂 Sync files
+      - name: 📂 Sync files via FTPS
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: ${{ secrets.ftp_server }}
           username: ${{ secrets.ftp_name }}
           password: ${{ secrets.ftp_password }}
-          dangerous-clean-slate: true
+          protocol: ftps           # ✅ REQUIRED: Use FTPS to match FileZilla behavior
           local-dir: ./dist/
+          verbose: true            # ✅ Optional: Shows detailed logs (great for debugging)
